@@ -75,6 +75,9 @@ client.on('message', message => {
         case 'gen':
             client.commands.get('gen').execute(message,param, Embed, fs, configs);
             break;
+        case 'help':
+            client.commands.get('help').execute(message, args,arrayCommands, Embed);
+            break;
         default:
             for(let index = 0;index<greetings.length;index++){
                 if(command.toLowerCase().includes(greetings[index])){
