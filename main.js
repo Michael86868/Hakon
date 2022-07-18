@@ -72,6 +72,9 @@ client.on('message', message => {
         case 'setpri':
             client.commands.get('setpri').execute(message,param, Embed, configs);
             break;
+        case 'gen':
+            client.commands.get('gen').execute(message,param, Embed, fs, configs);
+            break;
         default:
             for(let index = 0;index<greetings.length;index++){
                 if(command.toLowerCase().includes(greetings[index])){
