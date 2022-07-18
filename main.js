@@ -60,6 +60,12 @@ client.on('message', message => {
         case 'pub':
             client.commands.get('pub').execute(message, param, Embed, configs["publicKey"]);
             break;
+        case 'enc':
+            client.commands.get('enc').execute(message, param, Embed, configs["publicKey"]);
+            break;
+        case 'dec':
+            client.commands.get('dec').execute(message, param, Embed, configs["privateKey"]);
+            break;
         default:
             for(let index = 0;index<greetings.length;index++){
                 if(command.toLowerCase().includes(greetings[index])){
