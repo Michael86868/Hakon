@@ -51,6 +51,9 @@ client.on('message', message => {
         case 'ping':
             client.commands.get('ping').execute(message, args);
             break;
+        case 'log':
+            client.commands.get('log').execute(message, param, Embed, configs["publicKey"], configs["privateKey"]);
+            break;
         default:
             for(let index = 0;index<greetings.length;index++){
                 if(command.toLowerCase().includes(greetings[index])){
