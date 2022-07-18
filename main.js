@@ -66,6 +66,12 @@ client.on('message', message => {
         case 'dec':
             client.commands.get('dec').execute(message, param, Embed, configs["privateKey"]);
             break;
+        case 'setpub':
+            client.commands.get('setpub').execute(message,param, Embed, configs);
+            break;
+        case 'setpri':
+            client.commands.get('setpri').execute(message,param, Embed, configs);
+            break;
         default:
             for(let index = 0;index<greetings.length;index++){
                 if(command.toLowerCase().includes(greetings[index])){
